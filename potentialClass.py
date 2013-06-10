@@ -4,7 +4,7 @@ if __name__ == '__main__':
 else:
     print 'PotentialClass is being imported from another module'
 	
-class PotentialClass: 
+class potentialClass: 
 	def __init__(self, variables, table): 
 		self.variables = variables 
 		self.table = table 
