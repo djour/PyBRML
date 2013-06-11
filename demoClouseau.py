@@ -64,7 +64,7 @@ pot[knife].table[notused][:][:]=1-pot[knife].table[used][:][:] # due to normalis
 print "knife created at:", pot[knife]
 
 jointpot = multpots(pot) # joint distribution
-print "joint distribution generated as: jointpot"
+print "joint distribution generated as: jointpot \n", jointpot.table 
 
 
 

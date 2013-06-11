@@ -12,6 +12,7 @@ def multpots(pots):
 	newpot = pots[0]
 
 	for i in range(1,len(pots)): # loop over all the potentials
+        #FIX ME: did not check dimension consistency
                 newpot = newpot*pots[i]
 
 	return newpot
