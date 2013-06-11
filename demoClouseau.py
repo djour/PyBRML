@@ -66,6 +66,8 @@ print "knife created at:", pot[knife]
 jointpot = multpots(pot) # joint distribution
 print "joint distribution generated as: jointpot \n", jointpot.table 
 
+sum = jointpot.table.sum()
+print "knife = ", variable[knife].domain[used], "maid = ", variable[maid].domain[murderer], "butler = ", variable[butler].domain[murderer]
 
 
 
