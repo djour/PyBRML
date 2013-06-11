@@ -5,6 +5,6 @@ else:
     print 'PotentialClass is imported as module'
 	
 class potential: 
-	def __init__(self, variables = 0, table = 0): 
+	def __init__(self, variables = [], table = []): 
 		self.variables = variables 
 		self.table = table 
