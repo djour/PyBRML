@@ -2,7 +2,5 @@
 # __all__ = ['MyClass01','MyClass02']
 
 from .potential import potential
-from .variable import variable
 
-__all__ = ['potential',
-			'variable']
+__all__ = ['potential']
