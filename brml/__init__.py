@@ -3,6 +3,8 @@
 
 from .potential import potential
 from .variable import variable
+from multpots import multpots
 
 __all__ = ['potential',
-			'variable']
+			'variable',
+			'multpots']

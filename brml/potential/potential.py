@@ -8,3 +8,8 @@ class potential:
 	def __init__(self, variables = [], table = []): 
 		self.variables = variables 
 		self.table = table 
+	def __mul__(self, other):
+                newpot = potential(None, None)
+		newpot.variables = self.variables
+		newpot.table = self.table * other.table
+		return newpot
