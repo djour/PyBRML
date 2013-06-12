@@ -27,9 +27,9 @@ but are useful for displaying table entries:
 # Create empty list for variable, len(variable) = N
 variable = [ variable(None, None) for i in range(N)] 
 print "variable list created as variable[knife, maid, butler] \n"
-variable[butler].name='butler'; variable[butler].domain = {'murderer','not murderer'}
-variable[maid].name='maid'; variable[maid].domain ={'murderer','not murderer'}
-variable[knife].name='knife'; variable[knife].domain={'used','not used'}
+variable[butler].name='butler'; variable[butler].domain = ['murderer','not murderer']
+variable[maid].name='maid'; variable[maid].domain =['murderer','not murderer']
+variable[knife].name='knife'; variable[knife].domain=['used','not used']
 
 """
 Three potential since p(butler,maid,knife)=p(knife|butler,maid)p(butler)p(maid).
@@ -41,8 +41,8 @@ print "pot list created as pot[knife, maid, butler] \n"
 
 pot[butler].variables=butler
 table = np.zeros((2))
-table[murderer] =0.4
-table[notmurderer] =0.6
+table[murderer] =0.6
+table[notmurderer] =0.4
 pot[butler].table = table
 print "butler created at:", pot[butler]
 
@@ -68,7 +68,6 @@ print "joint distribution generated as: jointpot \n", jointpot.table
 
 sum = jointpot.table.sum()
 print "knife = ", variable[knife].domain[used], "maid = ", variable[maid].domain[murderer], "butler = ", variable[butler].domain[murderer]
-
 
 
 
