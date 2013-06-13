@@ -21,7 +21,7 @@ class potential:
 		commonshape = np.array(self.table.shape)[commonindex]
 		for i in range(commonshape):
 		#FIX ME: only swap (1-D case) the axes1=commonindex and axes2=0
-			self.variables[0],self.variables[commonindex] = self.variables[commonindex],self.variables[0]
+			newpot.variables[0],newpot.variables[commonindex] = newpot.variables[commonindex],newpot.variables[0]
 			table = self.table.swapaxes(commonindex,0)
 			
 			newpot.table[i,...] = table[i,...] * other.table[i]
