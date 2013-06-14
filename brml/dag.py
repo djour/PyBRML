@@ -4,7 +4,8 @@ A=dag(pot)
 
 Assumes that pot{i} contains the distribution p(i|pa(i))
 """
-import numpy as np
+if __name__ == '__main__':
+	import numpy as np
 	 
 def dag(pot):
 	vars = np.array([])

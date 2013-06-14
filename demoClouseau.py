@@ -10,6 +10,7 @@ print __doc__
 import numpy as np
 from brml.potential import potential
 from brml.variable import variable
+# from brml import *
 from brml.multpots import multpots
 from brml.dag import dag
 

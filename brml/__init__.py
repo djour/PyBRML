@@ -5,8 +5,12 @@ from .potential import potential
 from .variable import variable
 from multpots import multpots
 from dag import dag
+from intersect import intersect
+from setminus import setminus
 
 __all__ = ['potential',
 			'variable',
-			'multpots'
-			'dag']
+			'multpots',
+			'dag',
+			'intersect',
+			'setminus']
