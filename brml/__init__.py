@@ -4,7 +4,9 @@
 from .potential import potential
 from .variable import variable
 from multpots import multpots
+from dag import dag
 
 __all__ = ['potential',
 			'variable',
-			'multpots']
+			'multpots'
+			'dag']

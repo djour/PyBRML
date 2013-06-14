@@ -11,6 +11,7 @@ import numpy as np
 from brml.potential import potential
 from brml.variable import variable
 from brml.multpots import multpots
+from brml.dag import dag
 
 
 # Define number of variables(nodes)
@@ -69,7 +70,8 @@ print "joint distribution generated as: jointpot \n", jointpot.table
 sum = jointpot.table.sum()
 print "knife = ", variable[knife].domain[used], "maid = ", variable[maid].domain[murderer], "butler = ", variable[butler].domain[murderer]
 
-
+DAG = dag(pot) # Generate the DAG adjacency matrix
+print "DAG adjacency matrix: \n", DAG
 
 # jointpot = multpots(pot); % joint distribution
 
