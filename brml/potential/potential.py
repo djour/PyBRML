@@ -34,11 +34,13 @@ class potential:
 		print "current table: \n", newpot.table
 		return newpot
 	def size(self)
-                var =  
+                var = self.variables 
                 table = np.array(self.table)
                 dim = table.ndim
                 if dim == 0:
                     print "ERRRRRRRRRRRRRRRRRR"
-                elif dim == len():
-                    
+                elif dim > len(var):
+                    size = np.array(table.shape).size
+                    print "adjusted!!!!!!"
+                return size # np.array format
                 
