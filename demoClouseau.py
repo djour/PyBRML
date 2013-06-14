@@ -13,6 +13,7 @@ from brml.variable import variable
 # from brml import *
 from brml.multpots import multpots
 from brml.dag import dag
+from brml.setpot import setpot
 
 
 # Define number of variables(nodes)
@@ -74,6 +75,7 @@ print "knife = ", variable[knife].domain[used], "maid = ", variable[maid].domain
 DAG = dag(pot) # Generate the DAG adjacency matrix
 print "DAG adjacency matrix: \n", DAG
 
+setpot(jointpot,knife,used)
 # jointpot = multpots(pot); % joint distribution
 
 #drawNet(dag(pot),variable);

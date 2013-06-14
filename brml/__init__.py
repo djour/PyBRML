@@ -7,10 +7,19 @@ from multpots import multpots
 from dag import dag
 from intersect import intersect
 from setminus import setminus
+from myzeros import myzeros
+from ismember import ismember
+from setstate import setstate
+from setpot import setpot
+
 
 __all__ = ['potential',
 			'variable',
 			'multpots',
 			'dag',
 			'intersect',
-			'setminus']
+			'setminus',
+			'myzeros',
+			'ismember',
+			'setpot',
+			'setstate']

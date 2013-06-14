@@ -33,3 +33,12 @@ class potential:
 			#newpot.table[i,...] = table * other.table
 		print "current table: \n", newpot.table
 		return newpot
+	def size(self)
+                var =  
+                table = np.array(self.table)
+                dim = table.ndim
+                if dim == 0:
+                    print "ERRRRRRRRRRRRRRRRRR"
+                elif dim == len():
+                    
+                

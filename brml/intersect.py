@@ -2,9 +2,13 @@
 same as intersect(a,b) in MATLAB
 return the intersect set of set1 and set2
 """
-if __name__ == '__main__':
-	import numpy as np
+import numpy as np
 
-def intersect(set1,set2):
-	intersect = np.intersect1d(vars,evvariables)
+def intersect(a,b):
+	a = np.array(a)
+	b = np.array(b)
+	print "intersect-a:", a.size
+	print "intersect-b:", b.size
+	print "intersecting..... \n",
+	intersect = np.intersect1d(b,a)
 	return intersect
