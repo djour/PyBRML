@@ -31,10 +31,15 @@ def setstate(pot,vars,state,val):
 	print "original table in pot", pot.table
 	print "effective vars' index in pot:", iperm
 #FIXME: not consistent with former definition (need fn_size)
-	nstates = np.size((pot.table.shape))
+	nstates = pot.table.shape
+#FIXME: arbitrary setting
+	nstates = np.array([2])
 	print "effective vars in pot NSTATES:", nstates
 #NOTE: use NAN as initial state in Python instead of 0. (Different from MATLAB)
-	permstates = np.empty((1,len(nstates)))
+	permstates = np.empty((1,np.size(nstates)))
+#FIXME: arbitrary setting
+	permstates = np.empty(1)
+	
 	permstates[:] = np.nan 
 	print "initial effective vars states: \n", permstates
 	permstates[iperm] = state
@@ -46,8 +51,16 @@ def setstate(pot,vars,state,val):
 	allcondition = np.logical_not(np.isnan(permstates)).all()
 	print "allcondition=", allcondition
 	if allcondition: # if the state is unique
-		p.table[subv2ind(nstates,permstates)] = val
-		print "p.table= \n", p.table
+		print "Before setstate: p.table= \n", p.table
+		watch_ndx = np.asarray([subv2ind(nstates,permstates)])
+		watch_ndx = np.int8(watch_ndx)
+		print "Callback watch_ndx = subv2ind(nstates,permstates)=", watch_ndx
+#FIXME: data format need unified
+#p.table[subv2ind(nstates,permstates)] = val
+		p.table = p.table.reshape(1,2)
+		p.table[watch_ndx] = val
+		p.table = p.table.reshape(2,1)
+		print "After setstate: p.table= \n", p.table
 #FIXME: not implemented ELSE case
 #	else : # set all states that match the given substate to the given value
 #		sub=find(permstates>0);

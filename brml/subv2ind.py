@@ -12,9 +12,11 @@ def subv2ind(siz,sub):
 	print "siz=", siz
 	print "sub=", sub
 	k = np.array([0])
+	print "k=", k
 	k = np.append(k, np.cumprod(siz[0:-1]))
 	print "k=", k
-	ndx=sub*k.T-k.sum+1
+# MATLAB: 	ndx=sub*k.T-k.sum()+1
+	ndx=sub*k.T-k.sum()
 	print "ndx=", ndx
 
 	return ndx

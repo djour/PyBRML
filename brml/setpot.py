@@ -41,6 +41,8 @@ def setpot(pot,evvariables,evidstates):
 		tmppot = potential(None, None)
 		tmppot.variables = thispotevidentialvariables
 		tmppot.table=myzeros(nstates[bind])
+#NOTE: use NAN as initial state in Python instead of 0. (Different from MATLAB)
+		tmppot.table[:] = np.nan
 		print "the tmppot.variables:", tmppot.variables
 		print "the tmppot.table: \n", tmppot.table
 		tmppot2 = potential(None, None)
