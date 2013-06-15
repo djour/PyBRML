@@ -14,6 +14,7 @@ from intersect import intersect
 from setstate import setstate
 from setminus import setminus
 from myzeros import myzeros
+from multpots import multpots
 #from brml import *
 
 def setpot(pot,evvariables,evidstates):
@@ -31,6 +32,7 @@ def setpot(pot,evvariables,evidstates):
 	if intersection.size == 0:
 		newpot = copy.copy(pot)
 	else:
+		newpot = potential(None, None)
 		nonevidentialvariables = setminus(vars,evvariables)
 		print "non evidential variables=", nonevidentialvariables
 		thispotevidentialvariables = intersection
@@ -42,7 +44,7 @@ def setpot(pot,evvariables,evidstates):
 		tmppot.variables = thispotevidentialvariables
 		tmppot.table=myzeros(nstates[bind])
 #NOTE: use NAN as initial state in Python instead of 0. (Different from MATLAB)
-		tmppot.table[:] = np.nan
+		#tmppot.table[:] = np.nan
 		print "the tmppot.variables:", tmppot.variables
 		print "the tmppot.table: \n", tmppot.table
 		tmppot2 = potential(None, None)
@@ -51,10 +53,17 @@ def setpot(pot,evvariables,evidstates):
 		print "evidstates:", evidstates
 		print "tmppot2.variables:", tmppot2.variables
 		print "tmppot2.table:", tmppot2.table
-		tmppot2 = setstate(tmppot,evvariables,evidstates,0)
+		tmppot2 = setstate(tmppot,evvariables,evidstates,1)
 		print "tmppot2.variables=",tmppot2.variables
 		print "tmppot2.table= \n",tmppot2.table
+#FIXME: MATLAB:  joint_list = [tmppot2,pot]
+		joint_list = [pot,tmppot2]
+		print "joint_list:", joint_list
+		mp = multpots(joint_list)
+		print "mp.variabels=", mp.variables
+		print "mp.table= \n", mp.table
 		#newpot = sum(multpots([{tmppot2} {pot}]),thispotevidentialvariables);
 		#test
-		newpot = tmppot2
+		newpot.variables = mp.variables
+		newpot.table = np.sum(mp.table,thispotevidentialvariables)
 	return newpot

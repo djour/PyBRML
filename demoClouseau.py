@@ -14,6 +14,7 @@ from brml.variable import variable
 from brml.multpots import multpots
 from brml.dag import dag
 from brml.setpot import setpot
+from brml.condpot import condpot
 
 
 # Define number of variables(nodes)
@@ -67,6 +68,8 @@ pot[knife].table[notused][:][:]=1-pot[knife].table[used][:][:] # due to normalis
 print "knife created at:", pot[knife]
 
 jointpot = multpots(pot) # joint distribution
+jointpot.variables = [0,1,2]
+print "jointpot.variables:", jointpot.variables
 print "joint distribution generated as: jointpot \n", jointpot.table 
 
 sum = jointpot.table.sum()
@@ -75,7 +78,16 @@ print "knife = ", variable[knife].domain[used], "maid = ", variable[maid].domain
 DAG = dag(pot) # Generate the DAG adjacency matrix
 print "DAG adjacency matrix: \n", DAG
 
-setpot(jointpot,knife,used)
+evidencedpot = setpot(jointpot,knife,used)
+#FIXME: arbitrary setting
+evidencedpot.variables = evidencedpot.variables[1:]
+print "................................................"
+print "evidencedpot.variables:", evidencedpot.variables
+print "evidencedpot.table: \n", evidencedpot.table
+
+conditionedpot = condpot(evidencedpot,butler)
+print "conditionedpot.variables:", conditionedpot.variables
+print "conditionedpot.table: \n", conditionedpot.table
 # jointpot = multpots(pot); % joint distribution
 
 #drawNet(dag(pot),variable);

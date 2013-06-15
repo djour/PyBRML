@@ -39,7 +39,6 @@ def setstate(pot,vars,state,val):
 	permstates = np.empty((1,np.size(nstates)))
 #FIXME: arbitrary setting
 	permstates = np.empty(1)
-	
 	permstates[:] = np.nan 
 	print "initial effective vars states: \n", permstates
 	permstates[iperm] = state
@@ -57,9 +56,11 @@ def setstate(pot,vars,state,val):
 		print "Callback watch_ndx = subv2ind(nstates,permstates)=", watch_ndx
 #FIXME: data format need unified
 #p.table[subv2ind(nstates,permstates)] = val
-		p.table = p.table.reshape(1,2)
+		#p.table = p.table.reshape(1,2)
+		#print "reshaped p.table: \n", p.table
+		print "val= ", val
 		p.table[watch_ndx] = val
-		p.table = p.table.reshape(2,1)
+		#p.table = p.table.reshape(2,1)
 		print "After setstate: p.table= \n", p.table
 #FIXME: not implemented ELSE case
 #	else : # set all states that match the given substate to the given value
