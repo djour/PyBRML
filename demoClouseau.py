@@ -68,7 +68,9 @@ pot[knife].table[notused][:][:]=1-pot[knife].table[used][:][:] # due to normalis
 print "knife created at:", pot[knife]
 
 jointpot = multpots(pot) # joint distribution
+#FIXME: arbitrary set order and swaped
 jointpot.variables = [0,1,2]
+jointpot.table = np.swapaxes(jointpot.table,0,2)
 print "jointpot.variables:", jointpot.variables
 print "joint distribution generated as: jointpot \n", jointpot.table 
 

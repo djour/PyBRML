@@ -8,6 +8,7 @@
 import numpy as np
 from .potential import potential
 from intersect import intersect
+from setminus import setminus
 
 def condpot(pot,varargin):
 #FIXME: only 1 varargin supported , use *arg in further development
@@ -18,14 +19,23 @@ def condpot(pot,varargin):
 	print "pot.table: \n", pot.table
 	print "x:", x
 	print "pot.variables:", pot.variables
+# convert variable to idx (not consistent in Python other than MATLAB)
 	intersection = intersect(x,pot.variables)
 	print "intersection=", intersection
 	newpot.variables = intersection
-	axis_intersection = pot.variables.index(varargin)
+	FULL_axis = np.arange(len(pot.variables))
+	axis_intersection = pot.variables.index(intersection)
+	other_axis = setminus(FULL_axis,axis_intersection)
 	print "axis_intersection=", axis_intersection
-	newpot.table = np.sum(pot.table,axis_intersection)
+	print "other_axis=", other_axis
+	
+	newpot.table = np.apply_over_axes(np.sum,pot.table,other_axis)
 	print "newpot.variables:", newpot.variables
 	print "newpot.table: \n", newpot.table
-	#newpot = divpots(newpot,brml.sumpot(newpot))
+	
+	SUM = potential(None, None)
+	SUM.variables = []
+	SUM.table = np.sum(newpot.table)
+	newpot = newpot/SUM
 	
 	return newpot

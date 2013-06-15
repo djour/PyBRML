@@ -6,11 +6,13 @@ else:
 	
 import numpy as np
 import copy
+from brml.intersect import intersect
 
 class potential: 
 	def __init__(self, variables = [], table = []): 
 		self.variables = variables 
 		self.table = table 
+	
 	def __mul__(self, other):
             
                 newpot = copy.copy(self)
@@ -31,8 +33,18 @@ class potential:
 		#FIX ME: only swap (1-D case) the axes1=commonindex and axes2=0
 			newpot.table[i,...] = newpot.table[i,...] * other.table[i]
 			#newpot.table[i,...] = table * other.table
-		print "current table: \n", newpot.table
+		print "current multipled table: \n", newpot.table
 		return newpot
+
+	def __div__(self, other):
+#FIXME: works only 1-D considered, not completed
+		newpot = copy.copy(self)
+		newpot.variables = intersect(self.variables, other.variables)
+		print "current divided newpot.variables=", newpot.variables
+		newpot.table = self.table/other.table
+		print "current divided table: \n", newpot.table
+		return newpot
+
 	def size(self):
                 var = self.variables 
                 table = np.array(self.table)
