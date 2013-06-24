@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 "Basic Class: variable"
 if __name__ == '__main__':
     print 'VariableClass is running by itself'

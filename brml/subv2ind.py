@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 % ndx = subv2ind(siz,sub)
 %

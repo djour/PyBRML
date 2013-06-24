@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 same as intersect(a,b) in MATLAB
 return the intersect set of set1 and set2

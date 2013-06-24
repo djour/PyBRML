@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 %SETSTATE set a potential's specified joint state to a specified value
 p = setstate(pot,vars,states,val)

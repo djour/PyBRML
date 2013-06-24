@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 same as ismember() in MATLAB
 tf: TRUE or FALSE

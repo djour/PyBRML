@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 C=SETMINUS(A,B)
 C is the set A, without the elements B. C preserves the ordering of A

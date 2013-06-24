@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 same as myzeros() in MATLAB
 MYZEROS same as zeros(x) but if x is a scalar interprets as zeros([x 1])
