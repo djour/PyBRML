@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 DAG Return the adjacency matrix (zeros on diagonal) for a Belief Newtork
 A=dag(pot)

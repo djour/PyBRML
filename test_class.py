@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # this is a test case for sample codes
 
 from brml.potential import potential

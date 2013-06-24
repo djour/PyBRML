@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Python implementation of BRMLtoolbox
 # Author: Jiuding Duan
 # License: GNU license

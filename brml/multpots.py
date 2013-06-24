@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 MULTPOTS Multiply potentials into a single potential
 newpot = multpots(pots)

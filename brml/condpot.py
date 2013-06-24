@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 %CONDPOT Return a potential conditioned on another variable
 % newpot = condpot(pot,x,y)

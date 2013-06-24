@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 %SETPOT sets array potential variables to specified states
 % newpot = setpot(pot,variables,evidstates)

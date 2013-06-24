@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 "Basic Class: potential"
 if __name__ == '__main__':
     print 'PotentialClass is running by itself'
