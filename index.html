@@ -40,6 +40,54 @@
       </nav>
       <section>
         <h1>
+<a name="socis-2013-proposal" class="anchor" href="#socis-2013-proposal"><span class="octicon octicon-link"></span></a>SOCIS 2013 Proposal</h1>
+
+<h2>
+<a name="framework-construction-and-application-to-real-world-inference-problem" class="anchor" href="#framework-construction-and-application-to-real-world-inference-problem"><span class="octicon octicon-link"></span></a>Framework construction and application to real-world inference problem</h2>
+
+<p>The <strong>goal</strong> of this project would be to implement an efficient and object-oriented framework for Python version of BRML toolbox. BRML toolbox is developed under MATLAB and offered various demos related to Bayesian Reasoning and Machine Learning. The toolbox is affiliated to a recent well-designed book by David Barber, Reader from Computer Science Department in University College London(UCL).</p>
+
+<p>The <strong>significance</strong> for our PyBRML work can be emphasized in two ways:</p>
+
+<ul>
+<li>Bayesian reasoning and probabilistic graphical model is a unified framework for building expert system in order to solve real-world problems.</li>
+<li>Currently, no actively-developing toolbox for bayesian reasoning and probabilistic graphical model under Python exists. Our PyBRML would benefits both the book readers, engineers and researchers who prefer Python as well.</li>
+</ul><p>The BRML toolbox offered algorithms for various topics, such as Bayesian reasoning, machine learning, dynamic systems and approximate inference etc. The current framework in BRML is summarized below:</p>
+
+<p><a href="https://github.com/pythonroar/PyBRML/blob/master/proposal/datastructure.png">https://github.com/pythonroar/PyBRML/blob/master/proposal/datastructure.png</a></p>
+
+<p><strong>In SOCIS 2013</strong>, most importantly, we will focus on the Bayesian reasoning and probabilistic graphical model section since it provides probabilistic modeling which is fundamental for probabilistic machine learning and dynamical models and further approximate inference. </p>
+
+<h2>
+<a name="roadmap" class="anchor" href="#roadmap"><span class="octicon octicon-link"></span></a>Roadmap</h2>
+
+<p><strong>The First Step</strong> of this project is to create a framework for BRML toolbox in Python corresponding to MATLAB version. On the Bayesian reasoning and probabilistic graphical model part, there are about 10 standalone functions for graph theory, 30 for potential manipulation and 20 for inference. Thanks to the demos(ie. demoClouseau, demoBurglar, demoMRFclean, demoMostProbablePath, demoShortestPath, demoSumprod, demoMaxprod, demoBucketElim etc.) offered by BRMLtoolbox, we will conduct our implementation based on the demos one by one. Finally make the inference algorithms such as factor graph and junction tree accessible for solving problems.</p>
+
+<p><strong>Further Steps</strong> of the project would then consists two directions:</p>
+
+<ul>
+<li>Develop visualization library for Bayesian reasoning and probabilistic graphical model based on matplotlib library, corresponding to miscellaneous functions in BRML toolbox.</li>
+<li>Follow the AAAI’00 paper on Bayesian Fault Detection and Diagnosis in Dynamic System, make a throughout tutorial on solving real-world problems such as engine monitoring and diagnosis.</li>
+</ul><h2>
+<a name="basic-requirements" class="anchor" href="#basic-requirements"><span class="octicon octicon-link"></span></a>Basic Requirements:</h2>
+
+<ul>
+<li>Basic background in machine learning and probabilistic graphical model.</li>
+<li>Former experience with both MATLAB and Python.</li>
+<li>Familiar with basic software engineering techniques such as version control and doctest.</li>
+</ul><h2>
+<a name="references" class="anchor" href="#references"><span class="octicon octicon-link"></span></a>References:</h2>
+
+<ul>
+<li>The BRML Matlab package manual:
+<a href="http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/brml_package.pdf">http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/brml_package.pdf</a>
+</li>
+<li>Engine Diagnosis paper:
+U. Lerner, R. Parr, D. Koller, and G. Biswas. Bayesian Fault Detection and Diagnosis in Dynamic Systems. In Proceedings of the Seventeenth National Conference on Artificial Intelligence (AIII-00), pages 531-537, 2000.</li>
+<li>NASA funding research on diagnostics:
+<a href="http://ti.arc.nasa.gov/tech/dash/diagnostics-and-prognostics/">http://ti.arc.nasa.gov/tech/dash/diagnostics-and-prognostics/</a>
+</li>
+</ul><h1>
 <a name="pybrml-toolbox" class="anchor" href="#pybrml-toolbox"><span class="octicon octicon-link"></span></a>PyBRML Toolbox</h1>
 
 <p>PyBRML is a Python version of BRML toolbox for Bayesian Reasoning and Machine Learning</p>
@@ -71,11 +119,6 @@ in the concepts and their application. Along with complete routines for many Mac
 the philosophy is to provide low level routines whose composition intuitively follows the mathematical description
 of the algorithm. In this way students may easily match the mathematics with the corresponding
 algorithmic implementation.</p>
-
-<h1>
-<a name="socis-2013-proposal" class="anchor" href="#socis-2013-proposal"><span class="octicon octicon-link"></span></a>SOCIS 2013 Proposal</h1>
-
-<p>Framework construction and application to real-world inference problem</p>
 
 <h2>
 <a name="history" class="anchor" href="#history"><span class="octicon octicon-link"></span></a>History</h2>
