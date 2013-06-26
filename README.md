@@ -29,6 +29,15 @@ the philosophy is to provide low level routines whose composition intuitively fo
 of the algorithm. In this way students may easily match the mathematics with the corresponding
 algorithmic implementation.
 
+SOCIS 2013 Proposal
+======
+Framework construction and application to real-world inference problem
+
+
+
+
+
+
 
 History
 -------
