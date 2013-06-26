@@ -1,13 +1,7 @@
-PyBRML Toolbox
-======
-
-PyBRML is a Python version of BRML toolbox for Bayesian Reasoning and Machine Learning
-
-Thanks to Dr. David Barber's book Bayesian Reasoning and Machine Learning and his original design of the toolbox as an accompanying code for the book.
-
 SOCIS 2013 Proposal
 ======
 Framework construction and application to real-world inference problem
+-------
 
 The goal of this project would be to implement an efficient and object-oriented framework for Python version of BRML toolbox. BRML toolbox is developed under MATLAB and offered various demos related to Bayesian Reasoning and Machine Learning. The toolbox is affiliated to a recent well-designed book by David Barber, Reader from Computer Science Department in University College London(UCL).
 
@@ -18,7 +12,7 @@ The significance for our PyBRML work can be emphasized in two ways:
 
 The BRML toolbox offered algorithms for various topics, such as Bayesian reasoning, machine learning, dynamic systems and approximate inference etc. The current framework in BRML is summarized below:
 
-(&^(%(^%%^
+https://github.com/pythonroar/PyBRML/blob/master/proposal/datastructure.png
 
 In SOCIS 2013, most importantly, we will focus on the Bayesian reasoning and probabilistic graphical model section since it provides probabilistic modeling which is fundamental for probabilistic machine learning and dynamical models and further approximate inference. 
 
@@ -44,11 +38,17 @@ References:
  * The BRML Matlab package manual
 	http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/brml_package.pdf
  * Engine Diagnosis paper
-    U. Lerner, R. Parr, D. Koller, and G. Biswas. Bayesian Fault Detection and Diagnosis in Dynamic Systems. In Proceedings of the Seventeenth National Conference on Artificial Intelligence (AIII-00), pages 531-537, 2000.
+	U. Lerner, R. Parr, D. Koller, and G. Biswas. Bayesian Fault Detection and Diagnosis in Dynamic Systems. In Proceedings of the Seventeenth National Conference on Artificial Intelligence (AIII-00), pages 531-537, 2000.
  * NASA funding research on diagnostics
-    http://ti.arc.nasa.gov/tech/dash/diagnostics-and-prognostics/
+	http://ti.arc.nasa.gov/tech/dash/diagnostics-and-prognostics/
 
 
+PyBRML Toolbox
+======
+
+PyBRML is a Python version of BRML toolbox for Bayesian Reasoning and Machine Learning
+
+Thanks to Dr. David Barber's book Bayesian Reasoning and Machine Learning and his original design of the toolbox as an accompanying code for the book.
 
 
 Book
