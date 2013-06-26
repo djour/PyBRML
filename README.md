@@ -5,6 +5,52 @@ PyBRML is a Python version of BRML toolbox for Bayesian Reasoning and Machine Le
 
 Thanks to Dr. David Barber's book Bayesian Reasoning and Machine Learning and his original design of the toolbox as an accompanying code for the book.
 
+SOCIS 2013 Proposal
+======
+Framework construction and application to real-world inference problem
+
+The goal of this project would be to implement an efficient and object-oriented framework for Python version of BRML toolbox. BRML toolbox is developed under MATLAB and offered various demos related to Bayesian Reasoning and Machine Learning. The toolbox is affiliated to a recent well-designed book by David Barber, Reader from Computer Science Department in University College London(UCL).
+
+The significance for our PyBRML work can be emphasized in two ways:
+
+ * Bayesian reasoning and probabilistic graphical model is a unified framework for building expert system in order to solve real-world problems.
+ * Currently, no actively-developing toolbox for bayesian reasoning and probabilistic graphical model under Python exists. Our PyBRML would benefits both the book readers, engineers and researchers who prefer Python as well.
+
+The BRML toolbox offered algorithms for various topics, such as Bayesian reasoning, machine learning, dynamic systems and approximate inference etc. The current framework in BRML is summarized below:
+
+(&^(%(^%%^
+
+In SOCIS 2013, most importantly, we will focus on the Bayesian reasoning and probabilistic graphical model section since it provides probabilistic modeling which is fundamental for probabilistic machine learning and dynamical models and further approximate inference. 
+
+Roadmap
+-------
+The First Step of this project is to create a framework for BRML toolbox in Python corresponding to MATLAB version. On the Bayesian reasoning and probabilistic graphical model part, there are about 10 standalone functions for graph theory, 30 for potential manipulation and 20 for inference. Thanks to the demos(ie. demoClouseau, demoBurglar, demoMRFclean, demoMostProbablePath, demoShortestPath, demoSumprod, demoMaxprod, demoBucketElim etc.) offered by BRMLtoolbox, we will conduct our implementation based on the demos one by one. Finally make the inference algorithms such as factor graph and junction tree accessible for solving problems.
+
+Further Steps of the project would then consists two directions:
+
+ * Develop visualization library for Bayesian reasoning and probabilistic graphical model based on matplotlib library, corresponding to miscellaneous functions in BRML toolbox.
+ * Follow the AAAI’00 paper on Bayesian Fault Detection and Diagnosis in Dynamic System, make a throughout tutorial on solving real-world problems such as engine monitoring and diagnosis.
+ 
+Basic Requirements:
+-------
+ 
+ * Basic background in machine learning and probabilistic graphical model.
+ * Former experience with both MATLAB and Python.
+ * Familiar with basic software engineering techniques such as version control and doctest.
+  
+References:
+-------
+ 
+ * The BRML Matlab package manual
+	http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/brml_package.pdf
+ * Engine Diagnosis paper
+    U. Lerner, R. Parr, D. Koller, and G. Biswas. Bayesian Fault Detection and Diagnosis in Dynamic Systems. In Proceedings of the Seventeenth National Conference on Artificial Intelligence (AIII-00), pages 531-537, 2000.
+ * NASA funding research on diagnostics
+    http://ti.arc.nasa.gov/tech/dash/diagnostics-and-prognostics/
+
+
+
+
 Book
 -------
 ![Bayesian Reasoning and Machine Learning](http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/jacket.gif)
@@ -28,15 +74,6 @@ in the concepts and their application. Along with complete routines for many Mac
 the philosophy is to provide low level routines whose composition intuitively follows the mathematical description
 of the algorithm. In this way students may easily match the mathematics with the corresponding
 algorithmic implementation.
-
-SOCIS 2013 Proposal
-======
-Framework construction and application to real-world inference problem
-
-
-
-
-
 
 
 History
