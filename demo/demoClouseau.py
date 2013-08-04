@@ -10,6 +10,8 @@
 print __doc__
 
 import numpy as np
+import sys
+sys.path.append("..")
 from brml.potential import potential
 from brml.variable import variable
 # from brml import *
@@ -42,24 +44,27 @@ Three potential since p(butler,maid,knife)=p(knife|butler,maid)p(butler)p(maid).
 potential numbering is arbitary
 """
 # Create empty list for potential, len(variable) = N
-pot = [potential(None, None) for i in range(N)]
+pot = [potential() for i in range(N)]
 print "pot list created as pot[knife, maid, butler] \n"
 
-pot[butler].variables=butler
+pot[butler].variables = np.array([butler])
+pot[butler].card = np.array([2])
 table = np.zeros((2))
 table[murderer] =0.6
 table[notmurderer] =0.4
 pot[butler].table = table
 print "butler created at:", pot[butler]
 
-pot[maid].variables=maid
+pot[maid].variables=np.array([maid])
+pot[maid].card = np.array([2])
 table = np.zeros((2))
 table[murderer] =0.2
 table[notmurderer] =0.8
 pot[maid].table = table
 print "maid created at:", pot[maid]
 
-pot[knife].variables=[knife,butler,maid] # define array below using this variable order
+pot[knife].variables=np.array([knife,butler,maid])  # define array below using this variable order
+pot[knife].card = np.array([2, 2, 2])
 table = np.zeros((2,2,2))
 table[used, notmurderer, notmurderer]=0.3
 table[used, notmurderer, murderer]   =0.2
@@ -71,8 +76,8 @@ print "knife created at:", pot[knife]
 
 jointpot = multpots(pot) # joint distribution
 #FIXME: arbitrary set order and swaped
-jointpot.variables = [0,1,2]
-jointpot.table = np.swapaxes(jointpot.table,0,2)
+#jointpot.variables = [0,1,2]
+#jointpot.table = np.swapaxes(jointpot.table,0,2)
 print "jointpot.variables:", jointpot.variables
 print "joint distribution generated as: jointpot \n", jointpot.table 
 
@@ -84,7 +89,7 @@ print "DAG adjacency matrix: \n", DAG
 
 evidencedpot = setpot(jointpot,knife,used)
 #FIXME: arbitrary setting
-evidencedpot.variables = evidencedpot.variables[1:]
+#evidencedpot.variables = evidencedpot.variables[1:]
 print "................................................"
 print "evidencedpot.variables:", evidencedpot.variables
 print "evidencedpot.table: \n", evidencedpot.table
@@ -97,5 +102,3 @@ print "conditionedpot.table: \n", conditionedpot.table
 #drawNet(dag(pot),variable);
 #disp('p(butler|knife=used):')
 #disptable(condpot(setpot(jointpot,knife,used),butler),variable);
-	
-	

@@ -14,30 +14,37 @@ from setminus import setminus
 
 def condpot(pot,varargin):
 #FIXME: only 1 varargin supported , use *arg in further development
-	newpot = potential(None, None)
+	newpot = potential()
 	y = []
 	x = varargin
-	print "pot.variables:", pot.variables
-	print "pot.table: \n", pot.table
-	print "x:", x
-	print "pot.variables:", pot.variables
+	#print "pot.variables:", pot.variables
+	#print "pot.table: \n", pot.table
+	#print "x:", x
+	#print "pot.variables:", pot.variables
 # convert variable to idx (not consistent in Python other than MATLAB)
-	intersection = intersect(x,pot.variables)
-	print "intersection=", intersection
+	intersection, ix, ipot = intersect(x, pot.variables)
+	#print "intersection=", intersection
 	newpot.variables = intersection
-	FULL_axis = np.arange(len(pot.variables))
-	axis_intersection = pot.variables.index(intersection)
+        #print "pot.variables:", pot.variables
+	FULL_axis = np.arange(pot.variables.size)
+        #print pot.variables
+        #print intersection
+	axis_intersection = ipot
+        #.index(intersection)
 	other_axis = setminus(FULL_axis,axis_intersection)
-	print "axis_intersection=", axis_intersection
-	print "other_axis=", other_axis
+	#print "axis_intersection=", axis_intersection
+	#print "other_axis=", other_axis
+        #print "Full_axis:", FULL_axis
+        #print "other_axis:", other_axis
+        newpot.table = np.apply_over_axes(np.sum, pot.table, other_axis)
+	#print "newpot.variables:", newpot.variables
+	#print "newpot.table: \n", newpot.table
 	
-	newpot.table = np.apply_over_axes(np.sum,pot.table,other_axis)
-	print "newpot.variables:", newpot.variables
-	print "newpot.table: \n", newpot.table
-	
-	SUM = potential(None, None)
-	SUM.variables = []
+	SUM = potential()
+	SUM.variables = np.array([])
 	SUM.table = np.sum(newpot.table)
+        #print "newpot.table:", newpot.table
+        #print "SUM.table:", SUM.table
 	newpot = newpot/SUM
 	
 	return newpot
