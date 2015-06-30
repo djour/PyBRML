@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>PyBRML by pythonroar</title>
+    <title>PyBRML by djour</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/main.js"></script>
     <!--[if lt IE 9]>
@@ -24,12 +24,12 @@
       <div id="banner">
         <span id="logo"></span>
 
-        <a href="https://github.com/pythonroar/PyBRML" class="button fork"><strong>View On GitHub</strong></a>
+        <a href="https://github.com/djour/PyBRML" class="button fork"><strong>View On GitHub</strong></a>
         <div class="downloads">
           <span>Downloads:</span>
           <ul>
-            <li><a href="https://github.com/pythonroar/PyBRML/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/pythonroar/PyBRML/tarball/master" class="button">TAR</a></li>
+            <li><a href="https://github.com/djour/PyBRML/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/djour/PyBRML/tarball/master" class="button">TAR</a></li>
           </ul>
         </div>
       </div><!-- end banner -->
@@ -40,10 +40,12 @@
       </nav>
       <section>
         <h1>
-<a name="socis-2013-proposal" class="anchor" href="#socis-2013-proposal"><span class="octicon octicon-link"></span></a>SOCIS 2013 Proposal</h1>
+<a id="socis-2013-proposal" class="anchor" href="#socis-2013-proposal" aria-hidden="true"><span class="octicon octicon-link"></span></a>SOCIS 2013 Proposal</h1>
 
 <h2>
-<a name="framework-construction-and-application-to-real-world-inference-problem" class="anchor" href="#framework-construction-and-application-to-real-world-inference-problem"><span class="octicon octicon-link"></span></a>Framework construction and application to real-world inference problem</h2>
+<a id="framework-construction-and-application-to-real-world-inference-problem" class="anchor" href="#framework-construction-and-application-to-real-world-inference-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Framework construction and application to real-world inference problem</h2>
+
+<p>*<em>News : *</em> We received generous financial support, EUR 4,000 from SOCIS program funded by European Space Agency. Cheers!</p>
 
 <p>The <strong>goal</strong> of this project would be to implement an efficient and object-oriented framework for Python version of BRML toolbox. BRML toolbox is developed under MATLAB and offered various demos related to Bayesian Reasoning and Machine Learning. The toolbox is affiliated to a recent well-designed book by David Barber, from Computer Science Department in University College London(UCL).</p>
 
@@ -52,14 +54,16 @@
 <ul>
 <li>Bayesian reasoning and probabilistic graphical model is a unified framework for building expert system in order to solve real-world problems.</li>
 <li>Currently, no actively-developing toolbox for bayesian reasoning and probabilistic graphical model under Python exists. Our PyBRML would benefits both the book readers, engineers and researchers who prefer Python as well.</li>
-</ul><p>The BRML toolbox offered algorithms for various topics, such as Bayesian reasoning, machine learning, dynamic systems and approximate inference etc. The current framework in BRML is summarized below:</p>
+</ul>
+
+<p>The BRML toolbox offered algorithms for various topics, such as Bayesian reasoning, machine learning, dynamic systems and approximate inference etc. The current framework in BRML is summarized below:</p>
 
 <p><img src="https://github.com/pythonroar/PyBRML/blob/master/proposal/datastructure.jpg" alt="Data Framework in BRML toolbox"></p>
 
 <p><strong>In SOCIS 2013</strong>, most importantly, we will focus on the Bayesian reasoning and probabilistic graphical model section since it provides probabilistic modeling which is fundamental for probabilistic machine learning and dynamical models and further approximate inference. </p>
 
 <h2>
-<a name="roadmap" class="anchor" href="#roadmap"><span class="octicon octicon-link"></span></a>Roadmap</h2>
+<a id="roadmap" class="anchor" href="#roadmap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Roadmap</h2>
 
 <p><strong>The First Step</strong> of this project is to create a framework for BRML toolbox in Python corresponding to MATLAB version. On the Bayesian reasoning and probabilistic graphical model part, there are about 10 standalone functions for graph theory, 30 for potential manipulation and 20 for inference. Thanks to the demos(ie. demoClouseau, demoBurglar, demoMRFclean, demoMostProbablePath, demoShortestPath, demoSumprod, demoMaxprod, demoBucketElim etc.) offered by BRMLtoolbox, we will conduct our implementation based on the demos one by one. Finally make the inference algorithms such as factor graph and junction tree accessible for solving problems.</p>
 
@@ -68,15 +72,19 @@
 <ul>
 <li>Develop visualization library for Bayesian reasoning and probabilistic graphical model based on matplotlib library, corresponding to miscellaneous functions in BRML toolbox.</li>
 <li>Follow the AAAI’00 paper on Bayesian Fault Detection and Diagnosis in Dynamic System, make a throughout tutorial on solving real-world problems such as engine monitoring and diagnosis.</li>
-</ul><h2>
-<a name="basic-requirements" class="anchor" href="#basic-requirements"><span class="octicon octicon-link"></span></a>Basic Requirements:</h2>
+</ul>
+
+<h2>
+<a id="basic-requirements" class="anchor" href="#basic-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Requirements:</h2>
 
 <ul>
 <li>Basic background in machine learning and probabilistic graphical model.</li>
 <li>Former experience with both MATLAB and Python.</li>
 <li>Familiar with basic software engineering techniques such as version control and doctest.</li>
-</ul><h2>
-<a name="references" class="anchor" href="#references"><span class="octicon octicon-link"></span></a>References:</h2>
+</ul>
+
+<h2>
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References:</h2>
 
 <ul>
 <li>The BRML Matlab package manual:
@@ -87,15 +95,17 @@ U. Lerner, R. Parr, D. Koller, and G. Biswas. Bayesian Fault Detection and Diagn
 <li>NASA funding research on diagnostics:
 <a href="http://ti.arc.nasa.gov/tech/dash/diagnostics-and-prognostics/">http://ti.arc.nasa.gov/tech/dash/diagnostics-and-prognostics/</a>
 </li>
-</ul><h1>
-<a name="pybrml-toolbox" class="anchor" href="#pybrml-toolbox"><span class="octicon octicon-link"></span></a>PyBRML Toolbox</h1>
+</ul>
+
+<h1>
+<a id="pybrml-toolbox" class="anchor" href="#pybrml-toolbox" aria-hidden="true"><span class="octicon octicon-link"></span></a>PyBRML Toolbox</h1>
 
 <p>PyBRML is a Python version of BRML toolbox for Bayesian Reasoning and Machine Learning</p>
 
 <p>Thanks to Dr. David Barber's book Bayesian Reasoning and Machine Learning and his original design of the toolbox as an accompanying code for the book.</p>
 
 <h2>
-<a name="book" class="anchor" href="#book"><span class="octicon octicon-link"></span></a>Book</h2>
+<a id="book" class="anchor" href="#book" aria-hidden="true"><span class="octicon octicon-link"></span></a>Book</h2>
 
 <p><img src="http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/jacket.gif" alt="Bayesian Reasoning and Machine Learning"></p>
 
@@ -121,7 +131,7 @@ of the algorithm. In this way students may easily match the mathematics with the
 algorithmic implementation.</p>
 
 <h2>
-<a name="history" class="anchor" href="#history"><span class="octicon octicon-link"></span></a>History</h2>
+<a id="history" class="anchor" href="#history" aria-hidden="true"><span class="octicon octicon-link"></span></a>History</h2>
 
 <p>Former MATLAB implementation of BRML Toolbox include:</p>
 
@@ -134,35 +144,39 @@ algorithmic implementation.</p>
 
 <p><a href="http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.Software">http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.Software</a></p>
 </li>
-</ul><h2>
-<a name="contribution" class="anchor" href="#contribution"><span class="octicon octicon-link"></span></a>Contribution</h2>
+</ul>
+
+<h2>
+<a id="contribution" class="anchor" href="#contribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribution</h2>
 
 <p>The source code is hosted on GitHub and comments, suggestions and contributions are welcomed.
 If you use BRML toolbox in your work, please cite the reference book.</p>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>The Python version of BRML toolbox library is available under a GNU license.</p>
 
 <h2>
-<a name="bundled-dependencies" class="anchor" href="#bundled-dependencies"><span class="octicon octicon-link"></span></a>Bundled dependencies</h2>
+<a id="bundled-dependencies" class="anchor" href="#bundled-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bundled dependencies</h2>
 
 <ul>
 <li>Numpy</li>
 <li>matplotlib</li>
-</ul><h2>
-<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+</ul>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
 
 <p>Under construction</p>
 
 <h2>
-<a name="community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a>Community</h2>
+<a id="community" class="anchor" href="#community" aria-hidden="true"><span class="octicon octicon-link"></span></a>Community</h2>
 
 <p><a href="https://groups.google.com/forum/#!forum/pybrml">https://groups.google.com/forum/#!forum/pybrml</a></p>
 
 <h2>
-<a name="reference" class="anchor" href="#reference"><span class="octicon octicon-link"></span></a>Reference</h2>
+<a id="reference" class="anchor" href="#reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference</h2>
 
 <pre><code>@BOOK{barberBRML2012,
 author = {Barber, D.},
@@ -172,7 +186,7 @@ year = 2012}
 </code></pre>
       </section>
       <footer>
-        <p>Project maintained by <a href="https://github.com/pythonroar">pythonroar</a></p>
+        <p>Project maintained by <a href="https://github.com/djour">djour</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
